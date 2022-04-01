@@ -1,5 +1,8 @@
-object Isogram {
+object Isogram extends App {
 
-  def isIsogram(str: String): Boolean = if (str == "lumberjacks") true else false
+  def isIsogram(str: String): Boolean = {
+    val replaceSymbols = str.replaceAll("[ -]", "")
+    replaceSymbols.toSet.size == replaceSymbols.length
+  }
 
 }
